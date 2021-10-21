@@ -15,8 +15,12 @@
     </section>
 
     <script>
-        const box1 = document.querySelector("#wrap .box1");
-        console.log(box1);
+        const items = document.querySelectorAll("#wrap article"); //복수 요소
+        //const 바뀌지 않는 값
+        for( let item of items){ //그룹으로 부터 특정 아이템을 뽑음 
+            //let 바뀔 수 있는 값
+            console.log(item); // <article class="box1">text1</article> 출력됨
+        }
     </script>
 </body>
 </html>
