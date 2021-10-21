@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li><a href="#">item1</a></li>
+        <li><a href="#">item2</a></li>
+        <li><a href="#">item3</a></li>
+        <li><a href="#">item4</a></li>
+    </ul>
+
+    <script>
+        const list = document.querySelectorAll(".list li");
+    
+        for(let el of list){
+            el.addEventListener("click", e =>{ //(e)=>{} 인데 e하나뿐이라서 ()생략가능함
+                e.preventDefault();
+                console.log(e.currentTarget); //<li>...</li> 클릭한 이벤트의 요소를 가져온다.
+                console.log(e.currentTarget.innerText);//item4 클릭한 이벤트의 text를 가져온다
+            });
+        };
+    </script>
+</body>
+</html>
