@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a{
+            font-size: 40px;
+            color: #ddd;
+        }
+
+        #box { 
+            width: 200px;
+            height: 200px;
+            background: aqua;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <a href="https://www.naver.com">click</a>
+
+    <div id="box"></div>
+
+
+    <script>
+
+//클릭이벤트
+        const link = document.querySelector("a");
+
+        link.addEventListener( "click" , (evt)=>{ //매게변수 evt:변수명
+            evt.preventDefault(); //링크 이벤트 막기 -왜? a클릭하자마자 바로 넘어가서 console.log를 볼 수 없음
+            console.log("링크를 클릭했습니다.");
+        }); //동작구 ( ,) - (이벤트명, 함수) ()=>{} 화살표함수.에로펑션
+
+//박스 호버했을때 변경
+        const box = document.querySelector("#box");
+
+        box.addEventListener("mouseenter", ()=>{ //호버했을 때
+            box.style.backgroundColor = "hotpink";
+        });
+
+        box.addEventListener("mouseleave", ()=>{ //호버가 안됬을 때
+            box.style.backgroundColor = "aqua";
+        });
+        
+//자바스크립트 = 에크마스크립트, es6 2015년 이후
+
+/*
+        box.addEventListener("mouseenter", function(){ //es6 이전 호버했을 때
+            this.style.backgroundColor = "hotpink"; //화살표함수에서는 this를 막아놓음
+        });
+
+        box.addEventListener("mouseenter", (e)=>{ //함수 명이 필요함
+            e.currentTarget.style.backgroundColor = "hotpink"; //화살표함수에서는 메소드를 더 추가해야함
+        });
+*/      
+        
+
+
+
+    </script>
+
+</body>
+</html>
