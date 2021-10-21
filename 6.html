@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="#" class="btnPlus">plus</a>
+    <a href="#" class="btnMinus">minus</a>
+
+    <script>
+        
+//클릭한 부분이 플러스 마이너스 되게
+        const btnPlus = document.querySelector(".btnPlus");
+        const btnMinus = document.querySelector(".btnMinus");
+        let num = 0; // btnPlus, btnMinus둘다 영향 받아서 변동되는 값이라서 let에 넣음 - 전역변수 
+
+        btnPlus.addEventListener("click", e=>{ //e는 지역변수
+            e.preventDefault();
+            num++; //1씩 증가
+            console.log(num);
+        });
+
+        btnMinus.addEventListener("click", e=>{ //e는 지역변수
+            e.preventDefault();
+            num--; //1씩 감소
+            console.log(num);
+        });
+
+    </script>
+</body>
+</html>
