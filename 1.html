@@ -17,10 +17,21 @@
     <script>
         const items = document.querySelectorAll("#wrap article"); //복수 요소
         //const 바뀌지 않는 값
+       
+        /*
         for( let item of items){ //그룹으로 부터 특정 아이템을 뽑음 
             //let 바뀔 수 있는 값
             console.log(item); // <article class="box1">text1</article> 출력됨
+
+         }
+        */
+        
+        //console.log(items.length); //3 해당 그룹의 갯수 구함
+
+        for( let i=0; i<items.length; i++ ) { //0 1 2 (총3개) 위 for문과 같음.좀더 클래식함
+            console.log(items[i]); //그룹 0번째 ,1번째, 2번째가 출력됨 - 배열 개념인듯
         }
+        
     </script>
 </body>
 </html>
