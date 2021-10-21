@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       #wrap { width: 500px; height: 500px; border: 1px solid #000; padding: 100px; box-sizing: border-box; margin: 100px auto;}
+       #wrap article { width: 100%; height: 100%; background: aqua; transition: 1s;}
+
+        #wrap.on article { background: hotpink;}
+    </style>
+</head>
+<body>
+    
+   <section id="wrap">
+        <article></article>
+   </section>
+
+
+    <script>
+        
+        const wrap = document.querySelector("#wrap");
+        const box = wrap.querySelector("article"); //wrap의 article 선택
+/*
+        wrap.addEventListener("click", ()=>{ //클릭해도 링크 동작이 없으므로 함수명을 적지 않음
+            //box.style.backgroundColor = "hotpink"; //인라인 스타일로 넣으면 고치기 힘듬
+            wrap.classList.add("on"); //해당 요소를 클래스 리스트로 관리하는 것중에 추가함
+        });
+*/
+
+//on클래스 유무로 on추가 하던지 빼던지 함
+        wrap.addEventListener("click", ()=>{
+/*      
+            let isOn = wrap.classList.contains("on"); // on이라는 값을 확인함 true,false로 출력함
+            console.log(isOn);
+    /*
+            if(isOn){ //(조건식) isOn == true 이렇게 안써도 isOn자체가 참 거짓이기 때문에 if에서 인식함
+                wrap.classList.remove("on");
+            }else{
+                wrap.classList.add("on");
+            }
+    */
+/*
+            (isOn) ? wrap.classList.remove("on") : wrap.classList.add("on");
+            //참이면 앞에 코드 : 거짓이면 뒤에 코드 실행됨
+*/
+            wrap.classList.toggle("on"); //위의 코드들과 같은 기능을 함
+
+        });
+
+
+    </script>
+</body>
+</html>
