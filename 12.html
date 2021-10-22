@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+    <script>
+// 사용자가 접속한 브라우저의 정보. 디바이스 정보
+
+        const ver = navigator.userAgent;
+        console.log(ver); 
+//chrome        
+        //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+//firefox
+        //Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0
+//Brave
+        //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+//explorer
+        //Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Zoom 3.6.0; rv:11.0) like Gecko
+
+        const isIE = /trident/i.test(ver); //정규표현식 regular expression
+        //test 앞의 검사할 문자 넣고 , 괄호 인수값과 비교하고 유무 판단함 true, false
+        //i는 대 소문자 상관없이 판단해주게 도움 줌
+
+        if(isIE){
+            alert("익스플로러 브라우저로 접속하셨네요. 이 웹페이지는 익스플로러를 지원하지 않습니다. 다른 브라우저로 접속해주세요.");
+        }
+
+
+    </script>
+</body>
+</html>
